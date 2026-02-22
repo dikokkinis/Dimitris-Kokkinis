@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitris Kokkinis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png"/>
+</head>
+<body class="light-mode">
+
+    <svg style="display:none;" aria-hidden="true">
+        <filter id="marker-texture" filterUnits="objectBoundingBox" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise" />
+            
+            <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="2" result="edgeNoise" />
+            <feDisplacementMap in="SourceGraphic" in2="edgeNoise" scale="6" xChannelSelector="R" yChannelSelector="G" result="warped" />
+
+            <feComposite in="warped" in2="noise" operator="arithmetic" k1="0.4" k2="0.7" k3="0" k4="0" />
+        </filter>
+    </svg>
+
+    <div class="page-canvas">
+        <header class="menu-container">
+            <div style="position: absolute;top: 57px;right: 450px;cursor: pointer;rotate: -20deg;" class="buttons" id="theme-toggle">
+                <img src="assets/Buttons/Lamp_Button.png" class="light-asset">
+                <img src="assets/Buttons_DarkMode/Lamp_Button_DarkMode.png" class="dark-asset">
+            </div>
+
+            <div style="position: absolute;top: 170px;right: 470px;"class="sketchText" id="lamp-text">
+                <img src="assets/Sketches/lights_off_text.png" class="light-asset">
+                <img src="assets/Sketches_DarkMode/lights_off_text_DM.png" class="dark-asset">
+            </div>
+
+            <div style="position: absolute;bottom: 200px;right: 260px;"class="sketchText" id="github-text">
+                <img src="assets/Sketches/github_text.png" class="light-asset">
+                <img src="assets/Sketches_DarkMode/github_text_DM.png" class="dark-asset">
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-btn" onclick="scrollToSection('section-about')">
+                    <img src="assets/Buttons/About_me_Button.png" class="light-asset" alt="About Me">
+                    <img src="assets/Buttons_DarkMode/About_me_Button_DM.png" class="dark-asset" alt="About Me">
+                </button>
+                <button class="nav-btn" onclick="scrollToSection('section-projects')">
+                    <img src="assets/Buttons/Projects_Button.png" class="light-asset" alt="Projects">
+                    <img src="assets/Buttons_DarkMode/Projects_Button_DM.png" class="dark-asset" alt="Projects">
+                </button>
+                <button class="nav-btn" onclick="scrollToSection('section-artworks')">
+                    <img src="assets/Buttons/Artworks_Button.png" class="light-asset" alt="Artworks">
+                    <img src="assets/Buttons_DarkMode/Artworks_Button_DM.png" class="dark-asset" alt="Artworks">
+                </button>
+                <button class="nav-btn" onclick="scrollToSection('section-music')">
+                    <img src="assets/Buttons/Music_Button.png" class="light-asset" alt="Music">
+                    <img src="assets/Buttons_DarkMode/Music_Button_DM.png" class="dark-asset" alt="Music">
+                </button>
+                <button class="nav-btn" onclick="scrollToSection('section-skills')">
+                    <img src="assets/Buttons/Skills_Button.png" class="light-asset" alt="Skills">
+                    <img src="assets/Buttons_DarkMode/Skills_Button_DM.png" class="dark-asset" alt="Skills">
+                </button>
+            </nav>
+
+            <a href="https://github.com/dikokkinis" style="position: absolute;bottom: 260px;right: 100px;rotate: 15deg;" class="buttons" id="github-btn">
+                <img src="assets/Buttons/Github_Button.png" class="light-asset">
+                <img src="assets/Buttons_DarkMode/Github_Button_DarkMode.png" class="dark-asset">
+            </a>
+        </header>
+        <main>
+            <section id="section-about" class="content-section">
+                <button class="nav-btn" onclick="scrollToSection('section-about')">
+                    <img src="assets/Buttons/About_me_Button.png" class="light-asset" alt="About Me">
+                    <img src="assets/Buttons_DarkMode/About_me_Button_DM.png" class="dark-asset" alt="About Me">
+                </button>
+                <div style="position: relative; top: 45px;" class="text" id="about-text">
+                   <img src="assets/Texts/ab1.png" class="light-asset" alt="About Me Sketch">
+                   <img src="assets/Texts_DarkMode/ab1_DM.png" class="dark-asset" alt="About Me Sketch">
+                </div>
+                <div style="position: absolute; top: 50px; right: 550px;" class="logos" id="parthenon-logo">
+                   <img src="assets/Sketches/Parthenon_Logo.png" class="light-asset" alt="About Me Sketch">
+                   <img src="assets/Sketches_DarkMode/Parthenon_Logo_DM.png" class="dark-asset" alt="About Me Sketch">
+                </div>
+                <div style="position: absolute; top: 200px; right: 300px;" class="text" id="about-text-2">
+                   <img style="width: 300pt;" src="assets/Texts/ab2.png" class="light-asset" alt="About Me Sketch">
+                   <img style="width: 300pt;" src="assets/Texts_DarkMode/ab2_DM.png" class="dark-asset" alt="About Me Sketch">
+                </div>
+                <div style="position: absolute; bottom: 300px; right:750px" class="sketchText" id="contact-text">
+                   <img src="assets/Sketches/Contact_Text.png" class="light-asset" alt="Contact Sketch">
+                   <img src="assets/Sketches_DarkMode/Contact_Text_DM.png" class="dark-asset" alt="Contact Sketch">
+                </div>
+                <div style="position: absolute; bottom: 150px; right:900px;" class="buttons" id="email-btn">
+                   <a href="mailto:dikokkinis@gmail.com">
+                       <img src="assets/Buttons/Gmail_Button.png" class="light-asset" alt="Email Button">
+                       <img src="assets/Buttons_DarkMode/Gmail_Button_DM.png" class="dark-asset" alt="Email Button">
+                    </a>
+                </div>
+                <div style="position: absolute; bottom: 150px; right: 700px;" class="buttons" id="linkedin-btn">
+                   <a href="https://www.linkedin.com/in/dimitris-kokkinis13">
+                       <img src="assets/Buttons/Linkedin_Button.png" class="light-asset" alt="LinkedIn Button">
+                       <img src="assets/Buttons_DarkMode/Linkedin_Button_DM.png" class="dark-asset" alt="LinkedIn Button">
+                    </a>
+            </section>
+
+            <section id="section-projects" class="content-section">
+                <button class="nav-btn" onclick="scrollToSection('section-projects')">
+                    <img src="assets/Buttons/Projects_Button.png" class="light-asset" alt="Projects">
+                    <img src="assets/Buttons_DarkMode/Projects_Button_DM.png" class="dark-asset" alt="Projects">
+                </button>
+                <div style="position: absolute; top: 50px; right: 300px;" class="buttons" onclick="scrollNextProject()">
+                    <img src="assets/Buttons/Next_Project_Button.png" class="light-asset" alt="Next Project">
+                    <img src="assets/Buttons_DarkMode/Next_Project_Button_DM.png" class="dark-asset" alt="Next Project">
+                </div>
+                <!-- Projects Slider -->
+                <div class="projects-slider" id="projectsSlider">
+                    <!-- Project 1 -->
+                    <div class="project-slide">
+                        <div class="slide-content">
+                            <img src="assets/Project_Layouts/Project_1_Layout.png" class="light-asset" alt="Project 1 Layout"> 
+                            <img src="assets/Project_Layouts_DarkMode/Project_1_Layout_DM.png" class="dark-asset" alt="Project 1 Layout"> 
+                        </div>  
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-slide">
+                        <div class="slide-content">
+                            <img src="assets/Project_Layouts/Project_2_Layout.png" class="light-asset" alt="Project 2 Layout"> 
+                            <img src="assets/Project_Layouts_DarkMode/Project_2_Layout_DM.png" class="dark-asset" alt="Project 2 Layout"> 
+                            <!-- Source Code Buttons -->
+                            <div class="top-overlay-btn" style="top: 78px; left: 64%;">
+                                <a href="https://github.com/dikokkinis/Pattern_Recognition/blob/main/Labs/Lab1/1%CE%BF_%CE%95%CF%81%CE%B3%CE%B1%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%BF_%CE%A0%CF%81%CF%8C%CF%84%CF%85%CF%80%CE%B1.ipynb">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div>  
+                            <div class="top-overlay-btn" style="top: 289px; left: 48%;">
+                                <a href="https://github.com/dikokkinis/Pattern_Recognition/blob/main/Labs/Lab2/2%CE%B7%20%CE%95%CF%81%CE%B3%CE%B1%CF%83%CF%84%CE%B7%CF%81%CE%B9%CE%B1%CE%BA%CE%AE_%CE%A0%CF%81%CF%8C%CF%84%CF%85%CF%80%CE%B1.ipynb">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div> 
+                            <div class="top-overlay-btn" style="top: 425px; left: 79.7%;">
+                                <a href="https://github.com/dikokkinis/Pattern_Recognition/blob/main/Labs/Lab3/lab3-pattrec.ipynb">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->                    
+                    <div class="project-slide">
+                        <div class="slide-content">
+                            <img src="assets/Project_Layouts/Project_3_Layout.png" class="light-asset" alt="Project 2 Layout"> 
+                            <img src="assets/Project_Layouts_DarkMode/Project_3_Layout_DM.png" class="dark-asset" alt="Project 2 Layout"> 
+                            <div class="top-overlay-btn" style="bottom: 53px; left: 30.5%;">
+                                <a href="https://github.com/dikokkinis/Computer_Vision/blob/main/Labs/Lab1/CV_Lab1_part1and2.ipynb">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div> 
+                            <div class="top-overlay-btn" style="bottom: 248px; left: 85.8%;">
+                                <a href="https://github.com/dikokkinis/Computer_Vision/tree/main/Labs/Lab2">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->                    
+                    <div class="project-slide">
+                        <div class="slide-content">
+                            <img src="assets/Project_Layouts/Project_4_Layout.png" class="light-asset" alt="Project 2 Layout"> 
+                            <img src="assets/Project_Layouts_DarkMode/Project_4_Layout_DM.png" class="dark-asset" alt="Project 2 Layout"> 
+                            <div class="top-overlay-btn" style="top: 176px; left: 26.2%;">
+                                <a href="https://github.com/dikokkinis/Imaging_Technology-Analysis/blob/main/Image%26Video_Lab1.ipynb">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div>  
+                            <div class="top-overlay-btn" style="top: 269px; left: 27.3%;">
+                                <a href="https://github.com/dikokkinis/Imaging_Technology-Analysis/blob/main/Image%26Video_Lab2.ipynb">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div> 
+                            <div class="top-overlay-btn" style="top: 480px; left: 75.6%;">
+                                <a href="https://github.com/dikokkinis/Gulliver-App">
+                                    <img  src="assets/Buttons/Code_Button.png" class="light-asset" alt="GitHub Link">
+                                    <img  src="assets/Buttons_DarkMode/Code_Button_DM.png" class="dark-asset" alt="GitHub Link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>                                        
+                </div>
+            </section>
+
+            <section id="section-artworks" class="content-section">
+                <button class="nav-btn" onclick="scrollToSection('section-artworks')">
+                    <img src="assets/Buttons/Artworks_Button.png" class="light-asset" alt="Artworks">
+                    <img src="assets/Buttons_DarkMode/Artworks_Button_DM.png" class="dark-asset" alt="Artworks">
+                </button>
+                <div class="text-layout" id="artworks-text">
+                    <img src="assets/Project_Layouts/artworks.png" class="light-asset" alt="Artworks Layout">
+                    <img src="assets/Project_Layouts_DarkMode/artworks_DM.png" class="dark-asset" alt="Artworks Layout">
+                    <div style="position: relative; width: 260px; height: 220px; top: 230px; right: 150px;" class="buttons" id="artworks-button"> 
+                        <a href="https://dikokkinis.github.io/ArtPortfolio/">
+                            <img style="width: 290px; height: auto;" src="assets/Buttons/Frame_Button.png" class="light-asset" alt="Artworks">
+                            <img style="width: 290px; height: auto;" src="assets/Buttons_DarkMode/Frame_Button_DM.png" class="dark-asset" alt="Artworks">  
+                        </a>  
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-music" class="content-section">
+                <button class="nav-btn" onclick="scrollToSection('section-music')">
+                    <img src="assets/Buttons/Music_Button.png" class="light-asset" alt="Music">
+                    <img src="assets/Buttons_DarkMode/Music_Button_DM.png" class="dark-asset" alt="Music">
+                </button>
+           
+                <div style="position: relative; top: 75px; left: 35px;" class="turntable-container">
+                    <img src="./assets/Sketches/Turntable.png" class="light-asset turntable-base">
+                    <img src="./assets/Sketches_DarkMode/Turntable_DM.png" class="dark-asset turntable-base">
+                
+                    <img src="./assets/Sketches/Vinyl.png" class="light-asset vinyl-disc" id="vinylDisc">
+                    <img src="./assets/Sketches_DarkMode/Vinyl_DM.png" class="dark-asset vinyl-disc">
+                </div>
+
+                <div style="position: relative; top: 70px; left: 120px;" class="audio-controls">
+                    <button class="control-btn play-btn" id="playBtn">
+                        <img src="./assets/Buttons/Play_Button.png" class="light-asset">
+                        <img src="./assets/Buttons_DarkMode/Play_Button_DM.png" class="dark-asset">
+                    </button>
+                    <button class="control-btn next-btn" id="nextBtn">
+                        <img src="./assets/Buttons/Next_Button.png" class="light-asset">
+                        <img src="./assets/Buttons_DarkMode/Next_Button_DM.png" class="dark-asset">
+                    </button>
+                </div>
+                <div class="text" style="position: absolute; top: 270px; left: 720px;" id="music-text">
+                    <img src="assets/Texts/music.png" class="light-asset" alt="Music Layout">
+                    <img src="assets/Texts_DarkMode/music_DM.png" class="dark-asset" alt="Music Layout">
+                </div>
+                <div style="position: absolute; top: 110px; left:550px" class="sketchText" id="music-sketch">
+                    <img src="assets/Sketches/music.png" class="light-asset" alt="Music Sketch">
+                    <img src="assets/Sketches_DarkMode/music_DM.png" class="dark-asset" alt="Music Sketch">
+                </div>
+                <div class="buttons" style="position: absolute; top: 20px; right: 850px;" id="youtube-btn"> 
+                    <a href="https://www.youtube.com/@moon1342">
+                        <img src="assets/Buttons/Youtube_Button.png" class="light-asset" alt="YouTube Button">
+                        <img src="assets/Buttons_DarkMode/Youtube_Button_DM.png" class="dark-asset" alt="YouTube Button">
+                </div>
+                <div style="position: absolute; top: 30px; right:400px" class="sketchText" id="music-sketch">
+                    <img src="assets/Sketches/Support.png" class="light-asset" alt="Music Sketch">
+                    <img src="assets/Sketches_DarkMode/Support_DM.png" class="dark-asset" alt="Music Sketch">
+                </div>
+                <div style="position: absolute; top: 520px; left: 160px;" class="sketchText" id="playtext">
+                    <img style="width: 260px;" src="assets/Sketches/play_text.png" class="light-asset" alt="playtext Sketch">
+                    <img style="width: 260px;" src="assets/Sketches_DarkMode/play_text_DM.png" class="dark-asset" alt="playtext Sketch">
+                </div>
+                <audio id="audioPlayer" preload="auto"></audio>
+            </section>
+
+            <section id="section-skills" class="content-section">
+                <button class="nav-btn" onclick="scrollToSection('section-skills')">
+                    <img src="assets/Buttons/Skills_Button.png" class="light-asset" alt="Skills">
+                    <img src="assets/Buttons_DarkMode/Skills_Button_DM.png" class="dark-asset" alt="Skills">
+                </button>
+                <div style="position: relative; top: 20px; left: 70px"class="text-layout" id="artworks-text">
+                    <img src="assets/Project_Layouts/skills.png" class="light-asset" alt="Artworks Layout">
+                    <img src="assets/Project_Layouts_DarkMode/skills_DM.png" class="dark-asset" alt="Artworks Layout">
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
