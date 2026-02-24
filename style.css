@@ -334,8 +334,8 @@ body.dark-mode .content-section {
 }
 
 /* --- MOBILE RESPONSIVENESS (SCALE TO FIT) --- */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     .page-canvas {
-        zoom: calc(100vw / 1400);
+        zoom: calc(100vw / 1200);
     }
 }
