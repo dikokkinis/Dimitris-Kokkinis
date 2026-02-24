@@ -334,8 +334,18 @@ body.dark-mode .content-section {
 }
 
 /* --- MOBILE RESPONSIVENESS (SCALE TO FIT) --- */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
+    body {
+        display: block; 
+        overflow-x: hidden;
+    }
+
     .page-canvas {
-        zoom: calc(100vw / 1200);
+        transform: scale(calc(100vw / 1500));
+        transform-origin: top center;
+        
+        left: 50%;
+        margin-left: -750px; 
+        position: absolute;
     }
 }
