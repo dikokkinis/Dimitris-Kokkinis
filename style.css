@@ -38,14 +38,14 @@ body.dark-mode {
 
 .page-canvas {
     width: 1500px;
-    height: 900px;
-    position: absolute;
+    min-height: 100vh; 
+    position: relative; 
 }
 
 .menu-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 900px; 
     margin: 0 auto;
 }
 /*===================================================================*/
@@ -331,4 +331,11 @@ body.dark-mode .content-section {
 
 .is-spinning .vinyl-disc {
     animation: spinVinyl 4s linear infinite;
+}
+
+/* --- MOBILE RESPONSIVENESS (SCALE TO FIT) --- */
+@media screen and (max-width: 1500px) {
+    .page-canvas {
+        zoom: calc(100vw / 1500);
+    }
 }
