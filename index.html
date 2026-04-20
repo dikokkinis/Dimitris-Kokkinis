@@ -54,6 +54,10 @@
                     <img src="assets/Buttons/Music_Button.png" class="light-asset" alt="Music">
                     <img src="assets/Buttons_DarkMode/Music_Button_DM.png" class="dark-asset" alt="Music">
                 </button>
+                <button class="nav-btn" onclick="scrollToSection('section-animation')">
+                    <img src="assets/Buttons/Animation_Button.png" class="light-asset" alt="Animation">
+                    <img src="assets/Buttons_DarkMode/Animation_Button_DM.png" class="dark-asset" alt="Animation">
+                </button>
                 <button class="nav-btn" onclick="scrollToSection('section-skills')">
                     <img src="assets/Buttons/Skills_Button.png" class="light-asset" alt="Skills">
                     <img src="assets/Buttons_DarkMode/Skills_Button_DM.png" class="dark-asset" alt="Skills">
@@ -256,6 +260,36 @@
                     <img style="width: 260px;" src="assets/Sketches_DarkMode/play_text_DM.png" class="dark-asset" alt="playtext Sketch">
                 </div>
                 <audio id="audioPlayer" preload="auto"></audio>
+            </section>
+
+            <section id="section-animation" class="content-section">
+                <button class="nav-btn" onclick="scrollToSection('section-animation')">
+                    <img src="assets/Buttons/Animation_Button.png" class="light-asset" alt="Animation">
+                    <img src="assets/Buttons_DarkMode/Animation_Button_DM.png" class="dark-asset" alt="Animation">
+                </button>
+ 
+                <!-- Video player, centred in the section -->
+                <div class="animation-video-wrapper">
+                    <video
+                        id="animationVideo"
+                        class="animation-video"
+                        src="assets/animation_video/Animation.mp4"
+                        preload="metadata"
+                        playsinline
+                        muted
+                    ></video>
+ 
+                    <!-- Custom play / pause overlay button -->
+                    <button
+                        class="control-btn play-btn"
+                        id="animationPlayBtn"
+                        aria-label="Play animation"
+                        onclick="toggleAnimation()"
+                    >
+                        <img src="assets/Buttons/Play_Button.png" class="light-asset" alt="Play">
+                        <img src="assets/Buttons_DarkMode/Play_Button_DM.png" class="dark-asset" alt="Play">
+                    </button>
+                </div>
             </section>
 
             <section id="section-skills" class="content-section">

@@ -130,3 +130,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     loadTrack(currentTrackIndex);
 });
+
+function toggleAnimation() {
+    const video = document.getElementById('animationVideo');
+    const btn   = document.getElementById('animationPlayBtn');
+ 
+    if (video.paused) {
+        video.play();
+        // Hide the overlay button while playing so the native controls are accessible
+        btn.style.opacity = '0';
+        btn.style.pointerEvents = 'none';
+    } else {
+        video.pause();
+        btn.style.opacity = '1';
+        btn.style.pointerEvents = 'auto';
+    }
+ 
+    // Bring the button back when the video ends
+    video.onended = () => {
+        btn.style.opacity = '1';
+        btn.style.pointerEvents = 'auto';
+    };
+}
+ 
+// Clicking the video itself also toggles play/pause
+document.getElementById('animationVideo')
+    .addEventListener('click', toggleAnimation);

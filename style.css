@@ -300,7 +300,6 @@ body.dark-mode .content-section {
     transform-origin: center center; 
 }
 
-/* --- CONTROLS --- */
 .audio-controls {
     display: flex;
     gap: 30px;
@@ -333,7 +332,6 @@ body.dark-mode .content-section {
     animation: spinVinyl 4s linear infinite;
 }
 
-/* --- MOBILE RESPONSIVENESS (SCALE TO FIT) --- */
 @media screen and (max-width: 1500px) {
     body {
         display: block; 
@@ -348,4 +346,30 @@ body.dark-mode .content-section {
         margin-left: -750px; 
         position: absolute;
     }
+}
+
+/* ── Animation Section ─────────────────────────────────────────── */
+ 
+.animation-video-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+ 
+.animation-video {
+    width: 860px;         
+    max-width: 90%;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.18);
+    display: block;
+}
+ 
+body.dark-mode .animation-video {
+    box-shadow: 4px 4px 0px rgba(255,255,255,0.08);
 }
